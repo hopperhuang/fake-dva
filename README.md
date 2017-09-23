@@ -5,10 +5,10 @@ patch-code, 为想在旧项目使用dva方式，优雅书写redux，又不想引
 如果喜欢这种方式，我们建议使用在新项目使用dva。
 dva书写方式可见dva官方教程：https://github.com/dvajs/dva
 主要依赖库参考文档：
-1. redux-saga [https://github.com/redux-saga/redux-saga] 用于数据流处理
-2. webpack-buddle-loader [https://github.com/webpack-contrib/bundle-loader] 用于动态加载组件
-3. react-router-redux@next [https://github.com/reactjs/react-router-redux] 用于将路由信息同步到redux
-4. history [https://github.com/ReactTraining/history] 用于将history信息提供给路由组件
+1. [redux-saga](https://github.com/redux-saga/redux-saga) 用于数据流处理
+2. [webpack-buddle-loader](https://github.com/webpack-contrib/bundle-loader) 用于动态加载组件
+3. [react-router-redux@next](https://github.com/reactjs/react-router-redux) 用于将路由信息同步到redux
+4. [history](https://github.com/ReactTraining/history) 用于将history信息提供给路由组件
 
 文件说明:
 1. Bundle 用于生成动态组件
@@ -18,7 +18,11 @@ dva书写方式可见dva官方教程：https://github.com/dvajs/dva
 
 提示：
 路由配置的方式，可以根据自身项目路由的版本来配置。本例子基于v4的路由来配置。
+
+v4路由：
 v4路由 --> react-router-redux@next --> history@4
+
+v2,v3路由：
 v2,v3路由 --> react-router-redux@4 --> history@??? (v2, v3路由怎么配置react-router-redux请使用者自行解决)
 
 
