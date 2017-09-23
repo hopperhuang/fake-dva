@@ -4,6 +4,7 @@ patch-code, 为想在旧项目使用dva方式，优雅书写redux，又不想引
 对redux-saga和redux的简单封装。
 如果喜欢这种方式，我们建议使用在新项目使用dva。
 dva书写方式可见dva官方教程：https://github.com/dvajs/dva
+
 主要依赖库参考文档：
 1. [redux-saga](https://github.com/redux-saga/redux-saga) 用于数据流处理
 2. [webpack-buddle-loader](https://github.com/webpack-contrib/bundle-loader) 用于动态加载组件
@@ -32,6 +33,7 @@ v2,v3路由 --> react-router-redux@4 --> history@??? (v2, v3路由怎么配置re
 
 
 与dva略有不同之处: effects接受的第一个参数是sagaHelper, 第二个参数是action。dva则相反。
+
 ```
 // dva写法
 effects: {
