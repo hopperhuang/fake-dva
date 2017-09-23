@@ -1,0 +1,15 @@
+{
+  "name": "fake-dva",
+  "version": "1.0.0",
+  "description": "a patch for who wanna write redux luxrily in old pragram, but dont wanna import dva.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "patch",
+    "script"
+  ],
+  "author": "hopperhuang",
+  "license": "ISC"
+}
