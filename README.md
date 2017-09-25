@@ -51,3 +51,14 @@ effects: {
   },
 },
 ```
+
+dispatch的action 要用 namespace-reducerName（namespace-sagaName）的写法。
+
+```
+// dva写法
+dispatch({ type: 'game/center' });
+
+// fake-dva patch 写法
+dispatch({ type: 'game-center' });
+
+```
