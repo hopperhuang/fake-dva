@@ -55,18 +55,17 @@ function makeWatcher(takeValue, effect, namespace) {
     return oldMethod(action);
   };
   const sagaEffects = { ..._sagaEffects, put };
-  const type = typeof effect;
-  if (type === 'array') {
+  if (Array.isArray(effect)) {
     const helperType = effect[1].type;
     const ms = effect[1].ms;
     if (helperType === 'throttle') {
       return function* throttleWatcher() {
-        yield sagaEffects[helperType](ms, takeValue, effect, sagaEffects);
+        yield sagaEffects[helperType](ms, takeValue, effect[0], sagaEffects);
       };
     }
     if (helperType === 'takeLatest') {
       return function* takeLastWatcher() {
-        yield sagaEffects[helperType](takeValue, effect, sagaEffects);
+        yield sagaEffects[helperType](takeValue, effect[0], sagaEffects);
       };
     }
   }
